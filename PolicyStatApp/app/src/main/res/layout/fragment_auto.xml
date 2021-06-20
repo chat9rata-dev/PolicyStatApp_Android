@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_margin="5dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/currentpf"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current PIF:"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/currentpfval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/currentpf"
+            android:layout_marginTop="10dp"
+            android:text="432,078,389"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/netproduction"
+            android:layout_below="@id/currentpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Production:"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/netfval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/currentpf"
+            android:layout_toRightOf="@id/netproduction"
+            android:layout_marginTop="10dp"
+            android:text="-2,200"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/dialyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/netfval"
+            android:layout_marginTop="20dp"
+            android:text="Dialy Policy Gains/Losses in (K)"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorOrg"
+            android:textSize="20sp" />
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:layout_below="@+id/dialyPolicy"
+            android:id="@+id/barChart"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
